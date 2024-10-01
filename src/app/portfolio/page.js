@@ -26,7 +26,7 @@ const projects = [
         name: 'Practice Projects',
         description: 'A collection of smaller projects to either practice my skills, learn new frameworks and languages, or test new styles of development.',
         techStack: ['Typescript', 'React', 'Next.js'],
-        repository: 'https://github.com/kmeadows3/Practice-Projects/tree/master',
+        repository: 'https://github.com/kmeadows3/Practice-Projects',
     }
 ]
 
