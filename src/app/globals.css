@@ -4,7 +4,12 @@
   --padding-narrow: 3px;
   --background-color: #e0e1dd;
   --secondary-color: #778da9;
+  --header-size: 100px;
   }
+
+*{
+  box-sizing: border-box;
+}
 
 body{
   margin: 0px;
