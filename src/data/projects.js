@@ -24,7 +24,7 @@ export default function getProjects(){
         shortDescription: 'Portfolio Website for Katherine Meadows created with React and Next.js',
         description: 'You are currently browsing this particular project. This site was created as a practice project while learning React and Next.js. It uses GitHub actions to automatically package and deploy itself onto GitHub Pages when pushed to the repository.',
         techStack: ['React', 'Next.js'],
-        repository: 'https://github.com/https://github.com/kmeadows3/portfolio-app',
+        repository: 'https://github.com/kmeadows3/portfolio-app',
     },
     {
         id:4,

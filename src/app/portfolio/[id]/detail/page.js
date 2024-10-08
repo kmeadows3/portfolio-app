@@ -1,5 +1,6 @@
 import getProjects from '@/data/projects.js';
-import projects from '@/data/projects.js'
+import styles from '@/app/page.module.css'
+import Link from 'next/link';
 
 export function generateStaticParams(){
 
@@ -14,17 +15,18 @@ export default function Detail({params}){
     const project = getProjects().filter( p => p.id == id)[0];
 
     return (
-        <div>
-            <h1 >{project.name}</h1>
-            <div>{project.description}</div>
-            <div>{project.techStack.map( (language, index) => {
+        <div className={styles.portfolioDetail}>
+            <h1 className={styles.title}>{project.name}</h1>
+            <div className={styles.description}>{project.description}</div>
+            <div><strong>Languages Used: </strong>{project.techStack.map( (language, index) => {
                 return(<span key={project.name + "-" + language}>
                     {index > 0 ? ', ' + language : language}
                     </span>)
             })}</div>
-            <div>{project.repository}</div>
-            <div>{project.link}</div>
-            <div>{project.note}</div>
+            <div><strong>Repository: </strong><a href={project.repository}>GitHub</a></div>
+            {project.link && <div><strong>Link: </strong><a href={project.link}>{project.name}</a></div>}
+            {project.note && <div><strong>Notes: </strong>{project.note}</div>}
+            <div className={styles.footer}><Link href={`/portfolio`}>Return to Portfolio</Link></div>
         </div>
     )
 
