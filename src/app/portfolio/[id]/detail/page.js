@@ -1,6 +1,8 @@
 import getProjects from '@/data/projects.js';
 import styles from '@/app/page.module.css'
 import Link from 'next/link';
+import Image from 'next/image';
+import ImageSlider from '@/ui/ImageSlider';
 
 export function generateStaticParams(){
 
@@ -17,6 +19,7 @@ export default function Detail({params}){
     return (
         <div className={styles.portfolioDetail}>
             <h1 className={styles.title}>{project.name}</h1>
+            {project.images && <ImageSlider images={project.images}/>}
             <div className={styles.description}>{project.description}</div>
             <div><strong>Languages Used: </strong>{project.techStack.map( (language, index) => {
                 return(<span key={project.name + "-" + language}>

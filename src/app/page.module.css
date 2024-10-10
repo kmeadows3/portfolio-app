@@ -1,5 +1,4 @@
-
-.body{
+.body {
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
@@ -11,8 +10,8 @@
   display: grid;
   grid-template-rows: var(--header-size) 1fr;
   gap: var(--padding-wide);
-  grid-template-areas:  'header'
-                        'page';
+  grid-template-areas: 'header'
+    'page';
   min-height: 100vh;
   font-family: var(--font-geist-sans);
 }
@@ -21,7 +20,7 @@
   grid-area: page;
 }
 
-.header{
+.header {
   grid-area: header;
   position: sticky;
   top: 0px;
@@ -36,7 +35,7 @@
 
   padding: var(--padding-std);
 
-  .title{
+  .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,47 +45,47 @@
     flex-grow: 1;
   }
 
-  .navigation{
+  .navigation {
     align-self: flex-end;
     display: flex;
   }
 }
 
-.shadow{
+.shadow {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .2),
-  2px 2px 10px rgba(0, 0, 0, .2);
+    2px 2px 10px rgba(0, 0, 0, .2);
 
 }
 
-.cardContainer{
+.cardContainer {
   display: flex;
   flex-direction: column;
   gap: var(--padding-wide);
   justify-content: space-between;
 
-  .card{
+  .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 3px solid var(--secondary-color);
     border-radius: var(--border-radius-std);
 
-    .title{
+    .title {
       margin: 0px;
       background-color: var(--secondary-color);
     }
 
-    .stack{
+    .stack {
       background-color: var(--secondary-color);
     }
 
-    .stack span{
+    .stack span {
       display: inline;
       word-wrap: unset;
     }
   }
 
-  .card:hover{
+  .card:hover {
     transform: translate(0, -1px);
     cursor: pointer;
   }
@@ -94,7 +93,7 @@
 
 }
 
-.portfolioDetail{
+.portfolioDetail {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -103,7 +102,7 @@
   background-color: aliceblue;
   padding: 0px;
 
-  .title{
+  .title {
     background-color: var(--secondary-color);
     margin: 0px;
     padding: var(--padding-std) var(--padding-narrow);
@@ -113,18 +112,48 @@
 
   .description {
     padding-top: var(--padding-std);
-    text-align:justify;
+    text-align: justify;
   }
 
-  .footer{
+  .footer {
     background-color: var(--secondary-color);
     border-radius: 0 0 var(--border-radius-std) var(--border-radius-std);
     text-align: center;
-    padding: var(--padding-narrow)
+    padding: var(--padding-narrow);
   }
 
 }
 
-.portfolioDetail > *{
+.portfolioDetail>* {
   padding: var(--padding-narrow);
+}
+
+.image {
+  width: 100%;
+
+}
+
+.imageSlider{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.iconContainer {
+  display: flex;
+  gap: var(--padding-wide);
+  justify-content: center;
+  align-items: center;
+
+
+  & .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-std);
+    height: var(--arrow-height);
+    background-color: var(--secondary-color);
+    border-radius: calc(var(--arrow-height) *.5);
+  }
 }

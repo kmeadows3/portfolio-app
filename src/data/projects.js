@@ -8,7 +8,15 @@ export default function getProjects(){
         techStack: ['Java', 'PostgreSQL', 'Vue.js', 'JavaScript', 'HTML/CSS'],
         repository: 'https://github.com/kmeadows3/TnT-Team-Builder',
         link: 'https://ashy-pebble-02d86880f.5.azurestaticapps.net',
-        note: 'Server is running on the free tier of Microsoft Azure and takes time to boot when first accessed.'
+        note: 'Server is running on the free tier of Microsoft Azure and takes time to boot when first accessed.',
+        images: [
+            {
+                url: '/tntBuilder/1.png',
+                text: 'placeholder',
+                width: 400,
+                height: 200
+            },
+        ]
     },
     {
         id:2,
@@ -17,6 +25,56 @@ export default function getProjects(){
         description: 'Capstone project for Tech Elevator. Worked in a small team using Agile methodologies to build a rules-based chatbot designed to help prepare Tech Elevator students search for the job search and interview process. A Vue.js front-end sends user utterances to a RESTful Java application using Spring Boot to run a Tomcat server. Chatbot responses are retrieved from a PostgreSQL database, then filtered and ranked to determine the most fitting response. It is capable of providing general interview advice, providing practice HR and technical questions, generating and scoring a quiz on technical topics, and even searching for jobs.',
         techStack: ['Java', 'PostgreSQL', 'Vue.js', 'JavaScript', 'HTML/CSS'],
         repository: 'https://github.com/kmeadows3/Chatbot-Tech-Elevator-Capstone',
+        images: [
+            {
+                url: '/chatwick/MainScreen.png',
+                text: 'Desktop Layout',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/JobSearch.png',
+                text: 'Job Search',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/ExampleResponse.png',
+                text: 'Basic Responses',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/ExampleResponseWithPictures.png',
+                text: 'Response with additional media',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/CompanySearch.png',
+                text: 'Company Search',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/Quiz.png',
+                text: 'Technical Quiz',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/QuizResults.png',
+                text: 'Technical Quiz Results',
+                width: 400,
+                height: 200
+            },
+            {
+                url: '/chatwick/SelfieMode.png',
+                text: 'Picture Mode to Replace User Avatar',
+                width: 400,
+                height: 200
+            }
+        ]
     },
     {
         id:3,
