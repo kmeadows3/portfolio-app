@@ -3,10 +3,14 @@
   --padding-std: 6px;
   --padding-narrow: 3px;
   --background-color: #e0e1dd;
-  --secondary-color: #778da9;
+  --color-primary-dark: #435F7A;
+  --color-primary-mid: #647C92;
+  --color-primary-light: #8D9DAD ;
+  --secondary-color: #4A6580;
   --header-size: 100px;
   --border-radius-std: 7px;
   --arrow-height: 30px;
+  --indent: 20px;
   }
 
 *{

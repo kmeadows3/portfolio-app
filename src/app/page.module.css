@@ -24,6 +24,7 @@
   grid-area: header;
   position: sticky;
   top: 0px;
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
@@ -129,8 +130,10 @@
 }
 
 .image {
+  z-index: 0;
   width: 100%;
-
+  max-height: 500px;
+  object-fit: scale-down;
 }
 
 .imageSlider{
@@ -156,4 +159,95 @@
     background-color: var(--secondary-color);
     border-radius: calc(var(--arrow-height) *.5);
   }
+}
+
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-std);
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .title{
+    margin: 0px;
+    font-size: 2em;
+   text-align: center;
+    background-color: var(--color-primary-dark);
+    border-radius: var(--border-radius-std) var(--border-radius-std) 0 0;
+  }
+
+  .subsectionTitle{
+    margin: 0px;
+    font-size: 1.6em;
+    background-color: var(--color-primary-mid);  
+    text-align: center;
+  }
+
+  .entryTitle{
+    margin: 0px;
+    font-size: 1.3em;
+    background-color: var(--color-primary-light);
+    text-align: center;
+  }
+
+  .experienceHeader{
+    margin: 0px;
+    font-size: 1.2em;
+    background-color: var(--color-primary-light);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+      .role{
+        font-style: italic;
+      }
+
+      &>div{
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+
+  }
+  
+
+
+  .footer {
+    background-color: var(--color-primary-dark);
+    border-radius: 0 0 var(--border-radius-std) var(--border-radius-std);
+    text-align: center;
+    padding: var(--padding-narrow);
+  }
+
+  &.name{
+    font-size: 1.8em;
+    background-color: transparent;
+    text-align: center;
+    margin: var(--padding-std);
+  }
+
+  .contact >span{
+    margin-left: var(--indent);
+  }
+}
+
+
+
+
+
+.resume p{
+  margin: 0px;
+  padding: 0px var(--padding-wide);
+  text-align: justify;
+}
+
+.resume ul{
+  margin: 0px;
 }
