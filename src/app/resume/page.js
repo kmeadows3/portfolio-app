@@ -1,6 +1,7 @@
 import { resumeData } from "@/data/resume"
 import styles from '@/app/page.module.css'
 import Link from "next/link"
+import ResumeFooter from "@/ui/ResumeFooter"
 
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 }
 
 export default function Resume() {
+
     return (
         <div className={styles.resume}>
             <h1 className={styles.title}>Resume</h1>
@@ -21,7 +23,7 @@ export default function Resume() {
                 <span><strong>Location: </strong>{resumeData.contactInfo.location}</span>
             </div>
             <h2 className={styles.subsectionTitle}>Technical Experience</h2>
-            <div>
+            <div className={styles.background}>
                 {resumeData.technicalExperience.map(experience => (
                     <div key={experience.name}>
                         <h3 className={styles.entryTitle}>{experience.name}</h3>
@@ -41,7 +43,7 @@ export default function Resume() {
                         </div>
                         </h3>
                         
-                        <ul>
+                        <ul className={styles.highlights}>
                             {experience.highlights.map(highlight => (
                                 <li key={highlight}>{highlight}</li>
                             ))}
@@ -49,8 +51,8 @@ export default function Resume() {
                     </div>
                 ))}
             </div>
-            <h2 className={styles.subsectionTitle}>Education</h2>
-            <div>
+            <h2 className={`${styles.subsectionTitle} ${styles.noMargin}`}>Education</h2>
+            <div className={styles.background}>
                 {resumeData.Education.map(education => (
                     <div key={education.name}>
                         <p className={styles.entryTitle}><span><strong>{education.name}</strong> | {education.location}</span> <span>{education.dates}</span></p>
@@ -58,7 +60,7 @@ export default function Resume() {
                     </div>
                 ))}
             </div>
-            <div className={styles.footer}>&nbsp;</div>
+            <ResumeFooter/>
         </div>
     )
 }

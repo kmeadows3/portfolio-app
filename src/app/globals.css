@@ -3,12 +3,20 @@
   --padding-std: 6px;
   --padding-narrow: 3px;
   --background-color: #e0e1dd;
+  --color-primary-border: #17354F;
   --color-primary-dark: #435F7A;
   --color-primary-mid: #647C92;
   --color-primary-light: #8D9DAD ;
-  --secondary-color: #4A6580;
+  --color-primary-title-text: #D7DADD;
+  --color-secondary-dark: #602F98;
+  --color-secondary-mid: #4F4C83;
+  --color-secondary-light: #72709E;
+  --color-secondary-very-light: #9F9DBD;
+  --color-secondary-border: #211D55;
   --header-size: 100px;
+  --border-size: 2px;
   --border-radius-std: 7px;
+  --border-radius-outer: calc(var(--border-radius-std) + var(--border-size));
   --arrow-height: 30px;
   --indent: 20px;
   }
@@ -19,4 +27,8 @@
 
 body{
   margin: 0px;
+}
+
+a {
+  color: var(--color-secondary-dark);
 }
